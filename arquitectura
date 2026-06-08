@@ -1,0 +1,8 @@
+Cloud Scheduler (cada 15 min)
+        │  POST /run  con OIDC
+        ▼
+  Cloud Run (Python/Flask)
+  ├── 1. Pull suscripción Pub/Sub → cuenta mensajes
+  ├── 2. Si mensajes > umbral (default: 1):
+  │       └── BigQuery: SELECT COUNT(*) FROM tabla
+  └── 3. Devuelve JSON con el resultado
