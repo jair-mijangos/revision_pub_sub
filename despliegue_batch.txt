@@ -1,0 +1,2 @@
+cp terraform/terraform.tfvars.example terraform/terraform.tfvars
+# Llenar: project_id, pubsub_subscription_id, bq_dataset, bq_table
